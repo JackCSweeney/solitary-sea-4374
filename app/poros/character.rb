@@ -12,4 +12,12 @@ class Character
     @name = data[:name]
     @affiliation = data[:affiliation]
   end
+
+  def no_allies?
+    @allies.empty?
+  end
+
+  def no_enemies?
+    @enemies.empty?
+  end
 end
