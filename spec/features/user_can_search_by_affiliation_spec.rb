@@ -17,6 +17,11 @@ RSpec.describe "Avatar API Search by Affiliation" do
       # And I should see a list with the detailed information for the first 25 members of the Fire Nation.
       within ".search_results" do
         expect(page).to have_css("#character", count: 25)
+        expect(page).to have_css("img", count: 25)
+        expect(page).to have_content("Name:", count: 25)
+        expect(page).to have_content("Allies:", count: 25)
+        expect(page).to have_content("Enemies:", count: 25)
+        expect(page).to have_content("Affiliations:", count: 25)
       # And for each of the members I should see:
         within first("#character") do
       # - The name of the member (and their photo, if they have one)
