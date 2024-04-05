@@ -10,4 +10,8 @@ class CharacterSearchFacade
     end
   end
 
+  def character_count
+    characters.count
+  end
+
 end

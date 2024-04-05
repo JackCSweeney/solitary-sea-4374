@@ -18,5 +18,11 @@ RSpec.describe CharacterSearchFacade do
         expect(@facade.characters.first).to be_a(Character)
       end
     end
+
+    describe '#character_count' do
+      it 'can return the correct number of characters it created for given search terms' do
+        expect(@facade.character_count).to eq(97)
+      end
+    end
   end
 end
