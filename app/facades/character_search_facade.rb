@@ -14,4 +14,8 @@ class CharacterSearchFacade
     characters.count
   end
 
+  def first_25_characters
+    characters.slice(0, 25)
+  end
+
 end

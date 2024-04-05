@@ -24,5 +24,11 @@ RSpec.describe CharacterSearchFacade do
         expect(@facade.character_count).to eq(97)
       end
     end
+
+    describe '#first_25_characters' do
+      it 'returns only the first 25 characters' do
+        expect(@facade.first_25_characters.count).to eq(25)
+      end
+    end
   end
 end
